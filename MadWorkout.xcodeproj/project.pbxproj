@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0A99D61F3CB23200DFAB9A /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A99D11F3CB23200DFAB9A /* EditView.swift */; };
+		9B0A99D71F3CB23200DFAB9A /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A99D21F3CB23200DFAB9A /* InfoView.swift */; };
+		9B0A99D81F3CB23200DFAB9A /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A99D31F3CB23200DFAB9A /* Shared.swift */; };
+		9B0A99D91F3CB23200DFAB9A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A99D41F3CB23200DFAB9A /* TableViewController.swift */; };
+		9B0A99DA1F3CB23200DFAB9A /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A99D51F3CB23200DFAB9A /* WorkoutsView.swift */; };
 		9B4126951F1D06D8007A5D57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4126941F1D06D8007A5D57 /* AppDelegate.swift */; };
 		9B4126971F1D06D8007A5D57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4126961F1D06D8007A5D57 /* ViewController.swift */; };
 		9B41269A1F1D06D8007A5D57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126981F1D06D8007A5D57 /* Main.storyboard */; };
@@ -19,6 +24,13 @@
 		9B4126B81F1D06D8007A5D57 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4126B71F1D06D8007A5D57 /* InterfaceController.swift */; };
 		9B4126BA1F1D06D8007A5D57 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4126B91F1D06D8007A5D57 /* ExtensionDelegate.swift */; };
 		9B4126BC1F1D06D8007A5D57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126BB1F1D06D8007A5D57 /* Assets.xcassets */; };
+		9B4126D21F1D08A6007A5D57 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126CB1F1D08A6007A5D57 /* bg.png */; };
+		9B4126D31F1D08A6007A5D57 /* CaviarDreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126CC1F1D08A6007A5D57 /* CaviarDreams_Bold.ttf */; };
+		9B4126D41F1D08A6007A5D57 /* GeosansLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126CD1F1D08A6007A5D57 /* GeosansLight.ttf */; };
+		9B4126D51F1D08A6007A5D57 /* gishabd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126CE1F1D08A6007A5D57 /* gishabd.ttf */; };
+		9B4126D61F1D08A6007A5D57 /* icon_watch.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126CF1F1D08A6007A5D57 /* icon_watch.png */; };
+		9B4126D71F1D08A6007A5D57 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126D01F1D08A6007A5D57 /* icon.png */; };
+		9B4126D81F1D08A6007A5D57 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126D11F1D08A6007A5D57 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +76,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B0A99D11F3CB23200DFAB9A /* EditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		9B0A99D21F3CB23200DFAB9A /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		9B0A99D31F3CB23200DFAB9A /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		9B0A99D41F3CB23200DFAB9A /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9B0A99D51F3CB23200DFAB9A /* WorkoutsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
 		9B4126911F1D06D8007A5D57 /* MadWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MadWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4126941F1D06D8007A5D57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B4126961F1D06D8007A5D57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +97,13 @@
 		9B4126B91F1D06D8007A5D57 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		9B4126BB1F1D06D8007A5D57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B4126BD1F1D06D8007A5D57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B4126CB1F1D08A6007A5D57 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		9B4126CC1F1D08A6007A5D57 /* CaviarDreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Bold.ttf; sourceTree = "<group>"; };
+		9B4126CD1F1D08A6007A5D57 /* GeosansLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GeosansLight.ttf; sourceTree = "<group>"; };
+		9B4126CE1F1D08A6007A5D57 /* gishabd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gishabd.ttf; sourceTree = "<group>"; };
+		9B4126CF1F1D08A6007A5D57 /* icon_watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_watch.png; sourceTree = "<group>"; };
+		9B4126D01F1D08A6007A5D57 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		9B4126D11F1D08A6007A5D57 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +147,15 @@
 		9B4126931F1D06D8007A5D57 /* MadWorkout */ = {
 			isa = PBXGroup;
 			children = (
+				9B4126D91F1D0F94007A5D57 /* images */,
+				9B4126DA1F1D0F9F007A5D57 /* fonts */,
 				9B4126941F1D06D8007A5D57 /* AppDelegate.swift */,
 				9B4126961F1D06D8007A5D57 /* ViewController.swift */,
+				9B0A99D11F3CB23200DFAB9A /* EditView.swift */,
+				9B0A99D21F3CB23200DFAB9A /* InfoView.swift */,
+				9B0A99D31F3CB23200DFAB9A /* Shared.swift */,
+				9B0A99D41F3CB23200DFAB9A /* TableViewController.swift */,
+				9B0A99D51F3CB23200DFAB9A /* WorkoutsView.swift */,
 				9B4126981F1D06D8007A5D57 /* Main.storyboard */,
 				9B41269B1F1D06D8007A5D57 /* Assets.xcassets */,
 				9B41269D1F1D06D8007A5D57 /* LaunchScreen.storyboard */,
@@ -152,6 +183,27 @@
 				9B4126BD1F1D06D8007A5D57 /* Info.plist */,
 			);
 			path = "MadWorkout WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		9B4126D91F1D0F94007A5D57 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				9B4126CB1F1D08A6007A5D57 /* bg.png */,
+				9B4126CF1F1D08A6007A5D57 /* icon_watch.png */,
+				9B4126D01F1D08A6007A5D57 /* icon.png */,
+				9B4126D11F1D08A6007A5D57 /* logo.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		9B4126DA1F1D0F9F007A5D57 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9B4126CC1F1D08A6007A5D57 /* CaviarDreams_Bold.ttf */,
+				9B4126CD1F1D08A6007A5D57 /* GeosansLight.ttf */,
+				9B4126CE1F1D08A6007A5D57 /* gishabd.ttf */,
+			);
+			name = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +311,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B4126D61F1D08A6007A5D57 /* icon_watch.png in Resources */,
+				9B4126D41F1D08A6007A5D57 /* GeosansLight.ttf in Resources */,
+				9B4126D71F1D08A6007A5D57 /* icon.png in Resources */,
 				9B41269F1F1D06D8007A5D57 /* LaunchScreen.storyboard in Resources */,
 				9B41269C1F1D06D8007A5D57 /* Assets.xcassets in Resources */,
+				9B4126D31F1D08A6007A5D57 /* CaviarDreams_Bold.ttf in Resources */,
+				9B4126D81F1D08A6007A5D57 /* logo.png in Resources */,
+				9B4126D21F1D08A6007A5D57 /* bg.png in Resources */,
 				9B41269A1F1D06D8007A5D57 /* Main.storyboard in Resources */,
+				9B4126D51F1D08A6007A5D57 /* gishabd.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,8 +348,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B0A99D81F3CB23200DFAB9A /* Shared.swift in Sources */,
+				9B0A99D91F3CB23200DFAB9A /* TableViewController.swift in Sources */,
+				9B0A99D71F3CB23200DFAB9A /* InfoView.swift in Sources */,
 				9B4126971F1D06D8007A5D57 /* ViewController.swift in Sources */,
 				9B4126951F1D06D8007A5D57 /* AppDelegate.swift in Sources */,
+				9B0A99DA1F3CB23200DFAB9A /* WorkoutsView.swift in Sources */,
+				9B0A99D61F3CB23200DFAB9A /* EditView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +612,7 @@
 				9B4126C21F1D06D8007A5D57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B4126C41F1D06D8007A5D57 /* Build configuration list for PBXNativeTarget "MadWorkout WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +621,7 @@
 				9B4126C61F1D06D8007A5D57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B4126C81F1D06D8007A5D57 /* Build configuration list for PBXNativeTarget "MadWorkout" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +630,7 @@
 				9B4126CA1F1D06D8007A5D57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
