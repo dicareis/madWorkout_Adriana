@@ -25,18 +25,17 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var session : WCSession!
     
     func userDefaultManager() {
-        
         if UserDefaults.standard.object(forKey: "data") == nil{
             UserDefaults.standard.set(data, forKey: "data")
         } else {
             data = UserDefaults.standard.object(forKey: "data") as! [String : String]
         }
-        
     }
     
     
     func tableRefresh(){
         table.setNumberOfRows(data.count, withRowType: "row")
+        
         for index in 0..<table.numberOfRows{
             let row = table.rowController(at: index) as! TableRowController
             row.dates.setText(dates[index])
@@ -83,7 +82,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         DispatchQueue.main.async{ () -> Void in
             self.data = value!
             UserDefaults.standard.set(self.data, forKey: "data")
-            self.dates = Array(value!.values)
+            self.dates = Array(value!.keys)
             self.workouts = Array(value!.values)
             self.tableRefresh()
         }
