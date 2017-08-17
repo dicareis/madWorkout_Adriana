@@ -104,22 +104,7 @@ class ViewController: UIViewController, WCSessionDelegate
             
         }
         
-        //sendMessage(aDict: dictToSendToWatch)
-        
-        
-        
-        
-        
-       //**********************   13 minutes du video  ************************
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        sendMessage(aDict: dictToSendToWatch)
         
         
         
@@ -134,6 +119,25 @@ class ViewController: UIViewController, WCSessionDelegate
 //                print(error)
 //        })
     }
+    // ============================
+    
+    
+    func sendMessage (aDict: [String : String]){
+        
+        let messageToSend = ["Message" : aDict]
+        session.sendMessage(messageToSend, replyHandler: { (replyMessage) in
+            DispatchQueue.main.async(execute: { () -> Void in  })
+        
+        }) { (error) in
+            print("error: \(error.localizedDescription)")
+        }
+    }
+    
+    
+    
+    
+    
+    
     // ============================
     @IBAction func doneButton(_ sender: UIButton)
     {

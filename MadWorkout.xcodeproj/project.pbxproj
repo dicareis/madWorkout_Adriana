@@ -21,7 +21,6 @@
 		9B4126AA1F1D06D8007A5D57 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126A81F1D06D8007A5D57 /* Interface.storyboard */; };
 		9B4126AC1F1D06D8007A5D57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126AB1F1D06D8007A5D57 /* Assets.xcassets */; };
 		9B4126B31F1D06D8007A5D57 /* MadWorkout WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9B4126B21F1D06D8007A5D57 /* MadWorkout WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9B4126B81F1D06D8007A5D57 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4126B71F1D06D8007A5D57 /* InterfaceController.swift */; };
 		9B4126BA1F1D06D8007A5D57 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4126B91F1D06D8007A5D57 /* ExtensionDelegate.swift */; };
 		9B4126BC1F1D06D8007A5D57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126BB1F1D06D8007A5D57 /* Assets.xcassets */; };
 		9B4126D21F1D08A6007A5D57 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126CB1F1D08A6007A5D57 /* bg.png */; };
@@ -31,6 +30,11 @@
 		9B4126D61F1D08A6007A5D57 /* icon_watch.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126CF1F1D08A6007A5D57 /* icon_watch.png */; };
 		9B4126D71F1D08A6007A5D57 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126D01F1D08A6007A5D57 /* icon.png */; };
 		9B4126D81F1D08A6007A5D57 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126D11F1D08A6007A5D57 /* logo.png */; };
+		9B8938341F45E251007F5FA0 /* TableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8938331F45E251007F5FA0 /* TableRowController.swift */; };
+		9B8938361F45E519007F5FA0 /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8938351F45E519007F5FA0 /* WorkoutController.swift */; };
+		9B8938381F45FBE8007F5FA0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8938371F45FBE8007F5FA0 /* InterfaceController.swift */; };
+		9B8938391F45FE26007F5FA0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126D11F1D08A6007A5D57 /* logo.png */; };
+		9B89383A1F45FE27007F5FA0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4126D11F1D08A6007A5D57 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +97,6 @@
 		9B4126AB1F1D06D8007A5D57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B4126AD1F1D06D8007A5D57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B4126B21F1D06D8007A5D57 /* MadWorkout WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MadWorkout WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B4126B71F1D06D8007A5D57 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		9B4126B91F1D06D8007A5D57 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		9B4126BB1F1D06D8007A5D57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B4126BD1F1D06D8007A5D57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +107,9 @@
 		9B4126CF1F1D08A6007A5D57 /* icon_watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_watch.png; sourceTree = "<group>"; };
 		9B4126D01F1D08A6007A5D57 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		9B4126D11F1D08A6007A5D57 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		9B8938331F45E251007F5FA0 /* TableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRowController.swift; sourceTree = "<group>"; };
+		9B8938351F45E519007F5FA0 /* WorkoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
+		9B8938371F45FBE8007F5FA0 /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,10 +183,12 @@
 		9B4126B61F1D06D8007A5D57 /* MadWorkout WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				9B4126B71F1D06D8007A5D57 /* InterfaceController.swift */,
+				9B8938331F45E251007F5FA0 /* TableRowController.swift */,
+				9B8938371F45FBE8007F5FA0 /* InterfaceController.swift */,
 				9B4126B91F1D06D8007A5D57 /* ExtensionDelegate.swift */,
 				9B4126BB1F1D06D8007A5D57 /* Assets.xcassets */,
 				9B4126BD1F1D06D8007A5D57 /* Info.plist */,
+				9B8938351F45E519007F5FA0 /* WorkoutController.swift */,
 			);
 			path = "MadWorkout WatchKit Extension";
 			sourceTree = "<group>";
@@ -330,6 +338,7 @@
 			files = (
 				9B4126AC1F1D06D8007A5D57 /* Assets.xcassets in Resources */,
 				9B4126AA1F1D06D8007A5D57 /* Interface.storyboard in Resources */,
+				9B8938391F45FE26007F5FA0 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B89383A1F45FE27007F5FA0 /* logo.png in Resources */,
 				9B4126BC1F1D06D8007A5D57 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +373,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B4126BA1F1D06D8007A5D57 /* ExtensionDelegate.swift in Sources */,
-				9B4126B81F1D06D8007A5D57 /* InterfaceController.swift in Sources */,
+				9B8938381F45FBE8007F5FA0 /* InterfaceController.swift in Sources */,
+				9B8938361F45E519007F5FA0 /* WorkoutController.swift in Sources */,
+				9B8938341F45E251007F5FA0 /* TableRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
