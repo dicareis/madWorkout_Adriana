@@ -84,6 +84,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             self.data = value!
             UserDefaults.standard.set(self.data, forKey: "data")
             self.dates = Array(value!.values)
+            self.workouts = Array(value!.values)
             self.tableRefresh()
         }
         //replyHandler(["Message" : conversation])
