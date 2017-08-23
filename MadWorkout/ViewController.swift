@@ -21,6 +21,7 @@ class ViewController: UIViewController, WCSessionDelegate
     
     var theDatabase: [String : [[String : String]]]!
     var theExercise: String!
+    var counter = 0
     // ============================
     override func viewDidLoad()
     {
@@ -79,9 +80,14 @@ class ViewController: UIViewController, WCSessionDelegate
     // ============================
     @IBAction func saveToClipboard(_ sender: UIButton)
     {
+        counter += 1
+        
+        if counter == 3 {
         let unSortedEcerciseKeys = Array(self.exerciseAccountability.keys)
         UIPasteboard.general.string = unSortedEcerciseKeys.joined(separator: ",")
-        print("Tu fais quoi?????")
+        self.mAlterts("Saved to Clipboard!")
+        counter = 0
+        }
     }
     // ============================
     @IBAction func sendToWatch(_ sender: AnyObject)
@@ -103,6 +109,7 @@ class ViewController: UIViewController, WCSessionDelegate
             dictToSendToWatch[aDate] = str
             
         }
+        self.mAlterts("Watch synchronized!")
         
         sendMessage(aDict: dictToSendToWatch)
         

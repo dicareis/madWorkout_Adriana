@@ -22,7 +22,9 @@
                                 <tableRow identifier="row" id="Equ-nI-nlA" customClass="TableRowController" customModule="MadWorkout_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="PFy-aD-XYM">
                                         <items>
-                                            <label alignment="left" text="Dates" id="OZl-9Y-Zua"/>
+                                            <label alignment="left" verticalAlignment="center" text="Dates" id="OZl-9Y-Zua">
+                                                <fontDescription key="font" type="system" pointSize="11"/>
+                                            </label>
                                         </items>
                                     </group>
                                     <connections>
@@ -49,7 +51,9 @@
                         <group width="1" height="9" alignment="left" id="UBi-zj-9JL"/>
                         <imageView alignment="left" image="logo" id="O0t-G8-UDd"/>
                         <group width="1" height="6" alignment="left" id="JaS-SG-lBg"/>
-                        <label alignment="center" text="Label" numberOfLines="10" id="I5c-ze-fea"/>
+                        <label width="127" alignment="center" text="Label" textAlignment="left" numberOfLines="100" id="I5c-ze-fea">
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
                     </items>
                     <color key="backgroundColor" red="0.24705882352941178" green="0.36078431372549019" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
