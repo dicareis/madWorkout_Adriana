@@ -16,7 +16,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var dates : [String] = []
     var workouts : [String] = []
     var session : WCSession!
-    //---------------Methode predefinies-------------------------------------------------------------------//
+    //---------------Methode predefinies------------------------------------------------------------------//
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
@@ -29,7 +29,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             data = UserDefaults.standard.object(forKey: "data") as! [String : String]
         }
     }
-    //-----------------Methode qui fait la connection-------------------------------------------------------//
+    //-----------------Methode qui fait la connection------------------------------------------------------//
     func session (_ session: WCSession, didReceiveMessage message : [String : Any], replyHandler: @escaping([String : Any]) -> Void){
         let value = message["Message"] as? [String : String]
         DispatchQueue.main.async{ () -> Void in
