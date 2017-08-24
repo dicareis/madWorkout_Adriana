@@ -16,9 +16,9 @@ class ViewController: UIViewController, WCSessionDelegate{
     var theDatabase: [String : [[String : String]]]!
     var theExercise: String!
     var counter = 0
-    //--------------------------------
+    //----------------------------------------------------------------------------------------------------------------------//
     var exerciseAccountability = ["HEART: Treadmill" : 0, "LEGS: Laying Leg Press" : 0, "HAMSTRINGS: Laying Hamstring Curl" : 0, "HAMSTRINGS: Seated Hamstring Curls" : 0, "CALVES: Calf Press" : 0, "CALVES: Seated Calf Raise" : 0, "QUADS: Leg Extension" : 0, "INNER THIGH: Adductor" : 0, "GLUTES: Abductor" : 0, "GLUTES: Glute Kickback" : 0, "CHEST: Chest Press" : 0, "CHEST: Plated Chess Press" : 0, "CHEST: Pec Tec" : 0, "BACK: Cable Low Rows" : 0, "BACK: Cable Nose Pulls" : 0, "CHEST: Cable Flyes" : 0, "LATS: Lateral Pull-Downs" : 0, "ABS: Ab Cruch Machine" : 0, "LEGS: Standing Leg Press" : 0, "BACK: Rear Delt Flyes" : 0, "CHEST: Inclined Chess Press" : 0, "CHEST: Dumbell Flyes" : 0, "BICEPS: Preacher Curl" : 0, "BICEPS: Independant Bicep Curl" : 0, "TRICEPS: Tricep Pull-Down" : 0, "BICEPS: Cable Row Bicep Curls" : 0, "TRICEPS: Cable Row Pull-Downs" : 0, "TRICEPS: Bar Pull-Downs" : 0, "BICEPS: Overhead Cable Curls" : 0, "TRICEPS: Assisted Dips" : 0, "LATS: Assisted Pull-Ups" : 0, "BACK: Bentover Dumbell Rows" : 0, "BICEPS: Dumbell Curls" : 0, "TRICEPS: Dumbell Kickbacks" : 0, "BICEPS: Barbell Curls" : 0, "TRICEPS: Skull Crushers" : 0, "TRICEPS: French Presses" : 0, "SHOULDERS: Arnold Presses" : 0, "SHOULDERS: Overhead Presses" : 0, "SHOULDERS: Hammer Flyes" : 0, "SHOULDERS: Cable Upward Rows" : 0, "SHOULDERS: Barbell Upward Rows" : 0, "SHOULDERS: Cable Lateral Raises" : 0, "SHOULDERS: Dumbell Lateral Raises" : 0, "DELTS: Dumbell Forward Raises" : 0, "DELTS: Cable Forward Raises" : 0]
-    //---------------Methode predefinies du UIViewController-----------------//
+    //---------------Methode predefinies du UIViewController-----------------------------------------------------------------//
     override func viewDidLoad(){
         super.viewDidLoad()
         
@@ -37,26 +37,26 @@ class ViewController: UIViewController, WCSessionDelegate{
         self.saveUserDefaultIfNeeded()
     }
     
-    //--------------Methode obligatoire pour le protocole WCSessionDelegate - communication avec la montre------------------
+    //--------------Methode obligatoire pour le protocole WCSessionDelegate - communication avec la montre------------------//
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    //--------------Methode obligatoire pour le protocole WCSessionDelegate - communication avec la montre------------------
+    //--------------Methode obligatoire pour le protocole WCSessionDelegate - communication avec la montre------------------//
     @available (iOS 9.3, *)
     public func sessionDidDeactivate(_ session: WCSession) {
         //...
     }
-    //--------------Methode obligatoire pour le protocole WCSessionDelegate - communication avec la montre------------------
+    //--------------Methode obligatoire pour le protocole WCSessionDelegate - communication avec la montre------------------//
     @available (iOS 9.3, *)
     public func sessionDidBecomeInactive(_ session: WCSession) {
         //...
     }
-    //--------------Methode obligatoire pour le protocole WCSessionDelegate - communication avec la montre------------------
+    //--------------Methode obligatoire pour le protocole WCSessionDelegate - communication avec la montre------------------//
     @available (iOS 9.3, *)
     public func session (_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         //...
     }
-    //--------------Methode obligatoire pour le protocole WCSessionDelegate - communication avec la montre------------------
+    //--------------Methode obligatoire pour le protocole WCSessionDelegate - communication avec la montre------------------//
     public func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         DispatchQueue.main.async {
             () -> Void in
@@ -73,7 +73,7 @@ class ViewController: UIViewController, WCSessionDelegate{
         counter = 0
         }
     }
-    //--------------Methode qui batit le dictionnaire pour l'envoyer a la montre ------------------
+    //--------------Methode qui batit le dictionnaire pour l'envoyer a la montre ----------------------------------------//
     @IBAction func sendToWatch(_ sender: AnyObject) {
         counter = 0
         var dictToSendToWatch: [String : String] = [:]
@@ -92,7 +92,7 @@ class ViewController: UIViewController, WCSessionDelegate{
         self.mAlterts("Watch synchronized!")
         sendMessage(aDict: dictToSendToWatch)
     }
-    //---------------Methode qui envoie les informations a la montre-----------------
+    //---------------Methode qui envoie les informations a la montre-----------------------------------------------------//
     func sendMessage (aDict: [String : String]){
         
         let messageToSend = ["Message" : aDict]
@@ -102,7 +102,7 @@ class ViewController: UIViewController, WCSessionDelegate{
             print("error: \(error.localizedDescription)")
         }
     }
-    //---------------Methode que reinitialise les champs de la page au default-----------------
+    //---------------Methode que reinitialise les champs de la page au default--------------------------------------------//
     @IBAction func doneButton(_ sender: UIButton){
         counter = 0
         self.thePickerView.selectRow(0, inComponent: 0, animated: true)
@@ -116,7 +116,7 @@ class ViewController: UIViewController, WCSessionDelegate{
         self.theRepsField.text = ""
         self.theSetsField.text = ""
     }
-    //----------------Methode qu'ajoute un nouveau exercice, s'il n'existe pas----------------
+    //----------------Methode qu'ajoute un nouveau exercice, s'il n'existe pas-------------------------------------------//
     fileprivate func saveUserDefaultIfNeeded(){
         //self.exerciseAccount.removeObjectForKey("exercises")
         
@@ -127,7 +127,7 @@ class ViewController: UIViewController, WCSessionDelegate{
             self.exerciseAccountability = self.exerciseAccount.value(forKey: "exercises") as! [String : Int]
         }
     }
-    //-----------------Methode pour verifier s'il y a un UserDefault avec la cle envoyer par parametre---------------
+    //-----------------Methode pour verifier s'il y a un UserDefault avec la cle envoyer par parametre------------------//
     func checkForUserDefaultByName(_ theName: String, andUserDefaultObject: UserDefaults) -> Bool{
         let userDefaultObject = andUserDefaultObject.object(forKey: theName)
         
@@ -136,11 +136,11 @@ class ViewController: UIViewController, WCSessionDelegate{
         }
         return true
     }
-    //-----------------Methode qui define la quantite de colonnes du pickerView---------------
+    //-----------------Methode qui define la quantite de colonnes du pickerView------------------------------------------//
     func numberOfComponentsInPickerView(_ pickerView: UIPickerView) -> Int{
         return 1
     }
-    //-----------------Methode pour remplir les informations d'exercices---------------
+    //-----------------Methode pour remplir les informations d'exercices--------------------------------------------------//
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView{
         let pickerLabel = UILabel()
         var anArrayOfString = ["- CHOOSE EXERCISE -"]
@@ -162,11 +162,11 @@ class ViewController: UIViewController, WCSessionDelegate{
         
         return pickerLabel
     }
-    //------------------Methode qui define la quantite de lignes du pickerView--------------
+    //------------------Methode qui define la quantite de lignes du pickerView----------------------------------------------//
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return self.exerciseAccountability.count;
     }
-    //------------------Methode pour remplir les informations de date--------------
+    //------------------Methode pour remplir les informations de date------------------------------------------------------//
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         var anArrayOfString = ["NO DATA"]
@@ -179,17 +179,17 @@ class ViewController: UIViewController, WCSessionDelegate{
         
         self.theExercise = anArrayOfString[row]
     }
-    //-------------------Action du bouton-------------
+    //-------------------Action du bouton-------------------------------------------------------------------------------------//
     @IBAction func addSetButton(_ sender: UIButton) {
         counter = 0
         self.addExercise()
     }
-    //-------------------Action du bouton-------------
+    //-------------------Action du bouton--------------------------------------------------------------------------------------//
     @IBAction func hideKeyboard(_ sender: UIButton) {
         counter = 0
         self.view.endEditing(true)
     }
-    //--------------------Methode pour ajouter un nouveau exercice, dans une date, avec les series et repetitions------------
+    //--------------------Methode pour ajouter un nouveau exercice, dans une date, avec les series et repetitions------------//
     fileprivate func addExercise() {
         let theExercise = self.theExercise
         
@@ -220,14 +220,14 @@ class ViewController: UIViewController, WCSessionDelegate{
         self.accountForExercise(theExercise!)
         self.mAlterts(self.displayWorkout(theDate))
     }
-    //---------------------Methode pour caster la date (DateFormatter en String)-----------
+    //---------------------Methode pour caster la date (DateFormatter en String)---------------------------------------------------//
     func datePickerChanged(_ datePicker:UIDatePicker) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.full
         let strDate = dateFormatter.string(from: datePicker.date)
         return strDate
     }
-    //---------------------Methode qui compte le nombre de fois qu'un exercice a ete deja ajoute-----------
+    //---------------------Methode qui compte le nombre de fois qu'un exercice a ete deja ajoute-----------------------------------//
     fileprivate func accountForExercise(_ exerciseName: String) {
         var count = self.exerciseAccountability[exerciseName]!
         count += 1
@@ -235,7 +235,7 @@ class ViewController: UIViewController, WCSessionDelegate{
         self.exerciseAccount.setValue(self.exerciseAccountability, forKey: "exercises")
         self.thePickerView.reloadAllComponents()
     }
-    //----------------------Methode pour envoyer d'alerte au utilisateur----------
+    //----------------------Methode pour envoyer d'alerte au utilisateur----------------------------------------------------------//
     func mAlterts(_ theMessage: String) {
         let alertController = UIAlertController(title: "Workout Summary...", message:
             theMessage, preferredStyle: UIAlertControllerStyle.alert)

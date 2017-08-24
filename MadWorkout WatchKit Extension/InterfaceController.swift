@@ -9,7 +9,6 @@ import WatchKit
 import Foundation
 import WatchConnectivity
 // ============================
-
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
  // ============================
     @IBOutlet var table: WKInterfaceTable!
@@ -53,7 +52,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     //--------------Methode obligatoire pour le protocole---------------------------------------------------//
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
     }
     //---------------Methode pour verifier si l'interface est active-----------------------------------------//
     override func willActivate() {
@@ -64,13 +62,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             session = WCSession.default()
             session.delegate = self
             session.activate()
-            
             userDefaultManager()
             
             self.dates = Array(data.keys)
             self.workouts = Array(data.values)
             tableRefresh()
-            
         }
     }
     //--------------Methode obligatoire pour le protocole----------------------------------------------------//
@@ -85,4 +81,3 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 // ============================
 }
 // ============================
-

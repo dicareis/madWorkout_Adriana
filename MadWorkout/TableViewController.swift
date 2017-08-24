@@ -1,16 +1,11 @@
-
-
-
 // ============================
 import UIKit
 // ============================
 class TableViewController: UITableViewController{
-    
-    
-    /* -------------------------------- */
+    //----------//
     var theDatabase: [String : [[String : String]]]!
     var theWorkout: [String]!
-     /* -------------------------------- */
+     //-------------------------------------------------------------------------------------------------------------------------------//
     override func viewDidLoad(){
         super.viewDidLoad()
         self.clearsSelectionOnViewWillAppear = false
@@ -19,23 +14,21 @@ class TableViewController: UITableViewController{
         self.theDatabase = Shared.sharedInstance.getDatabase("db")
         self.theWorkout = self.fillUpWorkoutArray(self.getDates()[Shared.sharedInstance.theRow])
     }
-    /* -------------------------------- */
+    //----------Methode predefinies du UIViewController-------------------------------------------------------------------------//
     override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
     }
-    //----------Methode pour recuperer les dates de le dictionnaire-------------//
+    //----------Methode pour recuperer les dates de le dictionnaire------------------------------------------------------------------//
     func getDates() -> [String]{
         var tempArray = [""]
         
         for (a, _) in  self.theDatabase{
             tempArray.append(a)
         }
-        
         tempArray.remove(at: 0)
-        
         return tempArray
     }
-    //----------Methode pour batir l'array avec les elements du dictionnaire en fonction de la cle envoye par parametre-------------//
+    //----------Methode pour batir l'array avec les elements du dictionnaire en fonction de la cle envoye par parametre---------------//
     func fillUpWorkoutArray(_ theDate: String) -> [String]{
         var arrToReturn: [String] = []
         
@@ -50,16 +43,15 @@ class TableViewController: UITableViewController{
         }
         return arrToReturn
     }
-  
-    /* -------------------------------- */
+    //----------Methode que define la quantite de rangee------------------------------------------------------------------------------//
     override func numberOfSections(in tableView: UITableView) -> Int{
         return 1
     }
-    //----------Methode pour determiner la quantite de lignes dans la tableView-------------//
+    //----------Methode pour determiner la quantite de lignes dans la tableView--------------------------------------------------------//
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return self.theWorkout.count
     }
-    //----------Methode pour ajouter les informations de chaque ligne dans la tableView-----//
+    //----------Methode pour ajouter les informations de chaque ligne dans la tableView------------------------------------------------//
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"cell")
         cell.textLabel!.font = UIFont(name: "Caviar Dreams", size: 18.0)
@@ -69,11 +61,11 @@ class TableViewController: UITableViewController{
         cell.backgroundColor = UIColor.clear
         return cell
     }
-    //------------- Methode que permet de reordoner les rangees
+    //------------- Methode que permet de reordoner les rangees------------------------------------------------------------------------//
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool{
         return true
     }
-    //------------- Methode que permet d'etider une rangee d'une table (dans ce cas la effacer la ligne)
+    //------------- Methode que permet d'etider une rangee d'une table (dans ce cas la effacer la ligne)-------------------------------//
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             self.theWorkout.remove(at: indexPath.row)
@@ -85,11 +77,10 @@ class TableViewController: UITableViewController{
             //Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    //-------------
+    //------------- Methode que reordoner les rangees-------------------------------------------------------------------------------//
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to toIndexPath: IndexPath){
     }
-    
-    //-------------
+    //----------Methode pour effacer une date dans la database et les itens associe-------------------------------------------------//
     func deleteFromDatabase(_ theDate: String, indexToDelete: Int){
         for (a, b) in self.theDatabase{
             if a == theDate{
@@ -101,13 +92,16 @@ class TableViewController: UITableViewController{
             }
         }
     }
-     //-----------Methode que permet de reordonner les ranges--------------------------------------//
+    //-----------Methode que permet de reordonner les ranges-------------------------------------------------------------------------//
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool{
         return true
     }
     // ============================
 }
+// ============================
 
+
+//----------Extension pour afficher couleur correcte dans l'application-------------//
 extension UIColor {
     static func colorWithRedValue(redValue: CGFloat, greenValue: CGFloat, blueValue: CGFloat, alpha: CGFloat) -> UIColor {
         return UIColor(red: redValue/255.0, green: greenValue/255.0, blue: blueValue/255.0, alpha: alpha)

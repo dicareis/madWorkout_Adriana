@@ -5,11 +5,11 @@
 //  Created by eleves on 2017-07-17.
 //  Copyright © 2017 GrassetSucre. All rights reserved.
 //
-
+// ============================
 import WatchKit
-
+// ============================
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
-
+// ============================
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
     }
@@ -46,5 +46,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             }
         }
     }
-
+    // ============================
 }
+// ============================
