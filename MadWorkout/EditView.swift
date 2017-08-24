@@ -2,29 +2,24 @@
 import UIKit
 import Foundation
 // ============================
-class EditView: UIViewController
-{
+class EditView: UIViewController {
     // ============================
     @IBOutlet weak var theTableView: UITableView!
     @IBOutlet weak var addExerciseField: UITextField!
     var exerciseAccount: UserDefaults = UserDefaults.standard
     var exerciseAccountability: [String : Int]!
-    // ============================
-    override func viewDidLoad()
-    {
+    //---------------Methode predefinies du UIViewController-------------------//
+    override func viewDidLoad() {
         super.viewDidLoad()
         self.exerciseAccountability = self.exerciseAccount.value(forKey: "exercises") as! [String : Int]
     }
-    // ============================
-    override func didReceiveMemoryWarning()
-    {
+    //---------------Methode predefinies du UIViewController-------------------//
+        override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    // ============================
-    @IBAction func addExerciseButton(_ sender: UIButton)
-    {
-        if self.addExerciseField.text != ""
-        {
+    //--------------------Methode pour ajouter un nouveau exercice--------------//
+    @IBAction func addExerciseButton(_ sender: UIButton) {
+        if self.addExerciseField.text != "" {
             self.exerciseAccountability[self.addExerciseField.text!] = 0
             self.exerciseAccount.setValue(self.exerciseAccountability, forKey: "exercises")
             self.addExerciseField.text = ""
@@ -32,15 +27,13 @@ class EditView: UIViewController
             self.mAlterts("Exercise Added!")
         }
     }
-    // ============================
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    //----------Methode pour determiner la quantite de lignes dans la tableView-------------//
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.theTableView.backgroundColor = UIColor.clear
         return self.exerciseAccountability.count
     }
-    //-------------
-    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell
-    {
+    //----------Methode pour ajouter les informations de chaque ligne dans la tableView-----//
+    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         let intIndex = indexPath.row
         let index = self.exerciseAccountability.index(self.exerciseAccountability.startIndex, offsetBy: intIndex)
         
@@ -53,11 +46,9 @@ class EditView: UIViewController
         
         return cell
     }
-    //-------------
-    func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath)
-    {
-        if editingStyle == UITableViewCellEditingStyle.delete
-        {
+    //------------- Methode qui permet d'editer une rangee d'une table (dans ce cas la effacer la ligne)--//
+    func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath){
+        if editingStyle == UITableViewCellEditingStyle.delete{
             let intIndex = indexPath.row
             let index = self.exerciseAccountability.index(self.exerciseAccountability.startIndex, offsetBy: intIndex)
             self.exerciseAccountability[self.exerciseAccountability.keys[index]] = nil
@@ -65,21 +56,19 @@ class EditView: UIViewController
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
     }
-    //-------------
-    func textFieldShouldReturn(_ textField: UITextField!) -> Bool
-    {
+    //-------------Methode qui permet cacher le clavier--//
+    func textFieldShouldReturn(_ textField: UITextField!) -> Bool{
         textField.resignFirstResponder()
         return true
     }
-    //-------------
-    func mAlterts(_ theMessage: String)
-    {
+    //----------------------Methode pour envoyer d'alerte au utilisateur------------//
+    func mAlterts(_ theMessage: String){
         let alertController = UIAlertController(title: "Message...", message:
             theMessage, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
         
         self.present(alertController, animated: true, completion: nil)
     }
-    //-------------
+    // ============================
 }
 // ============================

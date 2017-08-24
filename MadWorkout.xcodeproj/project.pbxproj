@@ -220,10 +220,10 @@
 			children = (
 				9B8938331F45E251007F5FA0 /* TableRowController.swift */,
 				9B8938371F45FBE8007F5FA0 /* InterfaceController.swift */,
+				9B8938351F45E519007F5FA0 /* WorkoutController.swift */,
 				9B4126B91F1D06D8007A5D57 /* ExtensionDelegate.swift */,
 				9B4126BB1F1D06D8007A5D57 /* Assets.xcassets */,
 				9B4126BD1F1D06D8007A5D57 /* Info.plist */,
-				9B8938351F45E519007F5FA0 /* WorkoutController.swift */,
 			);
 			path = "MadWorkout WatchKit Extension";
 			sourceTree = "<group>";
